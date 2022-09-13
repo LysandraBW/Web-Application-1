@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="../../static/css/general/all.css">
+        <!-- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <!-- Scripts -->
+        <script src="../../static/scripts/general/nav.js"></script>
+        <script src="../../static/scripts/general/load.js"></script>
+        <script src="../../static/scripts/general/verify.js"></script>
+        <title>Schedule an Appointment</title>
+    </head>
+<body>
+    <nav>
+        <ul>
+            <li><a href=""><img src="../../static/images/nav/logo.png"></a></li>
+        </ul>
+        <ul class="jqnm">
+            <li><a href="" class="text tb">About Us</a></li>
+            <li><a href="" class="text tb">Contact Us</a></li>
+            <li><a href="" class="text tb">Help</a></li>
+            <li><a href="" class="text tb">Pay</a></li>
+            <li><a href="" class="text tb">Appointments</a></li>
+        </ul>
+        <ul>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </ul>
+    </nav>
+
+    <section id="sch">
+        <img src="../../static/images/schedule/ocean.jpeg">
+        <form action="/schedule" method="POST">
+            <header>
+                <h1 class="hdr"><span>Schedule</span><br>an Appointment</h1>
+                <p class="text"><span>Hello!</span> You can start getting your car back in tip-top shape by submitting out this form to schedule an appointment.</p>
+            </header>
+            <!-- This is where the error messages will display -->
+            <div class="errorMessageContainer">
+            </div>
+            <!-- Personal Information -->
+            <div class="personalInformation">
+                <h2 class="hdr">Personal Information:</h2>
+                <div class="a"><span class="text label">First Name</span><input class="text" type="text" name="firstName" required></div>
+                <div><span class="text label">Last Name</span><input class="text" type="text" name="lastName" required></div>
+                <div><span class="text label">Email</span><input class="text" type="email" name="email" required></div>
+                <div><span class="text label">Phone Number</span><input placeholder="Format: 123-456-7890" class="text" type="text" name="phoneNumber" required></div>
+                <div name="contactContainer">
+                    <p class="text label">How should we contact you?</p>
+                    <div class="displayFlex">
+                        <div><input type="radio" name="contactPreference" id="call" value="Call" required><label class="text" for="call">Call</label></div>
+                        <div><input type="radio" name="contactPreference" id="text" value="Text" required><label class="text" for="text">Text</label></div>
+                        <div><input type="radio" name="contactPreference" id="email" value="Email" required><label class="text" for="email">Email</label></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Vehicle Information -->
+            <div class="vehicleInformation">
+                <h2 class="hdr">Vehicle Information:</h2>
+                <div class="a"><span class="text label">VIN</span><input placeholder="Optional" class="text" type="text" name="VIN"></div>
+                <select class="b" name="carMake" required><option disabled selected name="make">Make</option><option name="Don't Know/Other">Don't Know/Other</option></select>
+                <select class="c" name="carModel" required><option disabled selected>Model</option><option name="Don't Know/Other">Don't Know/Other</option></select>
+                <select class="d" name="carYear" required><option disabled selected>Year</option><option name="Don't Know">Don't Know</option></select>
+            </div>
+            <!-- Appointment Information -->
+            <div class="appointmentInformation">
+                <h2 class="hdr">Appointment Information:</h2>
+                <div name="userServices">
+                    <p class="text label">Select Services:</p>
+                    <div class="displayFlex">
+                        <div>
+                            <div><input type="checkbox" name="Air Conditioning" id="Air Conditioning"><label class="text" for="Air Conditioning">Air Conditioning</label></div>
+                            <div><input type="checkbox" name="Brakes" id="Brakes"><label class="text" for="Brakes">Brakes</label></div>
+                            <div><input type="checkbox" name="Computer Diagnostics" id="Computer Diagnostics"><label class="text" for="Computer Diagnostics">Computer Diagnostics</label></div>
+
+                        </div>
+                        <div>
+                            <div><input type="checkbox" name="Engine Repairs" id="Engine Repairs"><label class="text" for="Engine Repairs">Engine Repairs</label></div>
+                            <div><input type="checkbox" name="Replacements" id="Replacements"><label class="text" for="Replacements">Replacements</label></div>
+                            <div><input type="checkbox" name="Tire Repairs" id="Tire Repairs"><label class="text" for="Tire Repairs">Tire Repairs</label></div>
+                        </div> 
+                        <div>
+                            <div><input type="checkbox" name="Tune-Up/Maintenance Check" id="Tune-Up/Maintenance Check"><label class="text" for="Tune-Up/Maintenance Check">Tune-Up/Maintenance Check</label></div>
+                            <div><input type="checkbox" name="Transmission Repairs" id="Transmission Repairs"><label class="text" for="Transmission Repairs">Transmission Repairs</label></div>
+                            <div><input type="checkbox" name="Other" id="Other"><label class="text" for="Other">Other</label></div>
+                        </div> 
+                    </div>
+                </div>
+                <div>
+                    <p class="text label">When are you available to drop off your car?</p>
+                    <textarea name="available" class="text" required></textarea>
+                </div>
+                <div>
+                    <p class="text label">Please tell us about the issue you're experiencing and/or any other important information we should know:</p>
+                    <textarea name="additionalInformation" placeholder="Optional" class="text"></textarea>
+                </div>
+            </div>
+            <button type="submit">Submit Form</button>
+        </form> 
+
+    </section>
+
+    <section class="other">
+        <ul>
+            <li class="text"><a style="color: white !important" href="/">Home</a></li>
+            <li class="text"><a style="color: white !important" href="/path">Appointments</a></li>
+            <li class="text"><a style="color: white !important" href="/schedule">Schedule an Appointment</a></li>
+            <li class="text"><a style="color: white !important" href="/view">View an Appointment</a></li>
+            <li class="text"><a style="color: white !important" href="/employeeLogIn">Employee Login <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+              </svg></a></li>
+        </ul>
+        <ul>
+            <li class="text"><a style="color: white !important" href="/contactUs">Contact Us</a></li>
+            <li class="text"><a style="color: white !important" href="/contactUs">Find Us</a></li>
+            <li class="text"><a style="color: white !important" href="/aboutUs">About Us</a></li>
+            <li class="text"><a style="color: white !important" href="/help">Help</a></li>
+            <li class="text"><a style="color: white !important" href="/pay">Pay</a></li>
+        </ul>
+        <ul>
+            <li class="text">Business Hours: 9AM to 6PM<br>Monday through Friday</li>
+            <li class="text">Phone Number: (123)-456-7890</li>
+            <li class="text">Address: 1234 N Dean Ave, Kissimmee, FL</li>
+            <li class="text">Business Email: waltronics@biz.com</li>
+            <li><img src="../../static/images/nav/logodark.png"></li>
+        </ul>
+    </section>
+</body>
+</html>

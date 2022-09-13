@@ -1,0 +1,105 @@
+#hlpo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../images/help/helpcar.png);
+    height: 20rem;
+    background-position-y: 50%;
+    background-position-x: 100%;
+}
+#hlpo header h1 
+{
+    color: var(--cw);
+}
+#hlpt
+{
+    margin: 0 auto 5rem auto;
+    width: fit-content;
+}
+#hlpt header
+{
+    text-align: center;
+}
+#hlpt header h2
+{
+    margin: 3rem 0;
+    font-size: 3rem;
+    font-weight: 700;
+}
+#hlpt > div h1
+{
+    font-size: 2rem;
+    color: var(--cbl);
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+#hlpt > div > div
+{
+    margin-left: 3rem;
+}
+#hlpt > div > div h2
+{
+    font-weight: 700;
+    font-size: 17px;
+}
+#hlpt > div > div h2:hover
+{
+    cursor: pointer;
+}
+#hlpt > div > div h2 span
+{
+    display: inline-block;
+    transition: all 203ms ease;
+}
+.signifyAccordion
+{
+    transform: rotate(405deg);
+}
+#hlpt > div > div p
+{
+    color: #313131;
+    font-weight: 500;
+    margin-left: 2rem;
+    width: 65ch;
+    line-height: 1.6;
+    border-left: 1px solid #28319466;
+    padding-left: 10px;
+    display: none;
+}
+
+@media (max-width: 560px)
+{
+    #hlpo header h1 
+    {
+        font-size: 3rem;
+    }
+    #hlpt header h2 
+    {
+        font-size: 2rem;
+    }
+    #hlpt
+    {
+        padding: 0 10px;
+    }
+    #hlpt > div h1
+    {
+        font-size: 1.875rem;
+    }
+    #hlpt > div > div p
+    {
+        width: auto;
+    }
+}
+
+@media (max-width: 300px)
+{
+    #hlpt header h2 
+    {
+        text-align: left;
+    }
+    #hlpt > div > div
+    {
+        margin-left: 10px;
+    }
+}

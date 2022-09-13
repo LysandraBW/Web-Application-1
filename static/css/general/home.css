@@ -1,0 +1,670 @@
+#hso
+{
+    display: grid;
+    grid-template-columns: 55% auto;
+    align-items: center;
+    margin: 0 11%;
+    padding: 10px 2% 20px 2%;
+    background: var(--cbl);
+    width: fit-content;
+}
+
+#hso img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+#hso header h1, #hso header p, #hso header button a
+{
+    color: var(--cw);
+}
+
+#hso header p
+{
+    margin: 20px 0;
+    width: 75%;
+}
+
+#hso button
+{
+    border: 1px solid var(--cw)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECOND SECTION */
+#hstw
+{
+    padding-top: 12rem;
+    margin-top: 10px;
+}
+
+#hstw header
+{
+    margin: 3% 11%;
+    text-align: center;
+}
+
+#hstw header h2
+{
+    font-size: 3.5rem;
+}
+
+#hstw header h2 span
+{
+    color: var(--cbl);
+    
+}
+
+
+#hstw header p
+{
+    width: 85ch;
+    margin: auto;
+    color: var(--cg);
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+#hstw div div img
+{
+    max-width: 15%;
+    display: block;
+    margin: auto;
+}
+
+#hstw > div
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 5% 11%;
+}
+
+#hstw div div
+{
+    padding: 0px 11%;
+}
+
+#hstw div div:nth-child(2)
+{
+    border-left: 1px solid #7777773d;
+    border-right: 1px solid #7777773d;
+}
+
+#hstw div div h4
+{
+    font-size: 140%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+#hstw div div p
+{
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOURTH SECTION */
+#hsf
+{
+    margin: 0 11%;
+    padding-bottom: 20rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 5rem;
+    width: fit-content;
+    align-items: center;
+}
+#hsf header
+{
+    padding: 12% 2% 20px 0;
+}
+#hsf header > span:first-child
+{
+    font-size: 1.25rem;
+    color: var(--cr);
+    position: relative;
+    top: 10px;
+    left: 6px;
+}
+#hsf header h2
+{
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+#hsf header h2 ~ span
+{
+    font-size: 12px;
+    font-weight: bold;
+}
+#hsf header h2 span
+{
+    color: var(--cbl);
+}
+#hsf header p
+{
+    width: 65ch;
+}
+#hsf header p a
+{
+    text-decoration: underline;
+}
+#hsf img
+{
+    width: 100%;
+}
+#hsf header h3
+{
+    font-size: 1.35rem;
+    margin-top: 2rem;
+    font-weight: 100;
+}
+#hsf header button
+{
+    border: 1px solid var(--cbk);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* THIRD SECTION */
+#hsth
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 14% 11%;
+    position: relative;
+}
+#hsth > div
+{
+    padding: 7rem 3rem;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+#hsth > div:nth-child(2)
+{
+    background: var(--cbk);
+    width: 101%;
+}
+#hsth > div:nth-child(3)
+{
+    background: var(--cdr);
+}
+#hsth > div:nth-child(1)
+{
+    background: var(--cbl);
+}
+
+
+#hsth header h4, #hsth header ~ p
+{
+    color: var(--cw);
+}
+#hsth header h4
+{
+    text-align: center;    
+    font-size: 3.5rem;
+
+}
+#hsth header p
+{
+    color: var(--cg);
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+}
+#hsth header ~ p
+{
+    display: none;
+    margin: 1rem 0;
+}
+#hsth div header ~ p span
+{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#hsth > div img
+{
+    transition: var(--str);
+}
+#hsth > div:nth-child(1) img
+{
+    width: 400px;
+}
+#hsth > div:nth-child(1) img:hover
+{
+    width: 410px;
+    transition: var(--ftr);
+}
+#hsth > div:nth-child(2) img
+{
+    width: 350px;
+    position: relative;
+    top: 3rem;
+}
+#hsth > div:nth-child(2) img:hover
+{
+    width: 360px;
+    transition: var(--ftr);
+}
+#hsth > div:nth-child(3) img
+{
+    width: 340px;
+    position: relative;
+}
+#hsth > div:nth-child(3) img:hover
+{
+    width: 350px;
+    transition: var(--ftr);
+}
+
+#hsth button
+{
+    border: 1px solid var(--cw);
+    position: absolute;
+    color: var(--cw);
+    bottom: 4rem;
+}
+#hsth button:hover
+{
+    cursor: pointer;
+}
+
+/* For the flip transition */
+.flipcancel
+{
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA */
+
+@media (min-width: 2600px)
+{
+    #hsf header p
+    {
+        font-size: 1.5rem;
+    }
+    #hsf header h2 ~ span
+    {
+        font-size: 1.5rem;
+    }
+    #hsf header > span:first-child
+    {
+        font-size: 2.25rem;
+    }
+    #hsf header h2
+    {
+        font-size: 4.5rem;
+    }
+    #hsf
+    {
+        width: auto;
+    }
+}
+@media (min-width: 2300px)
+{
+    #hso
+    {
+        padding: 10px 15% 20px 15%;
+    }
+    #hstw > div
+    {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #hstw div div
+    {
+        padding: 0px 5%;
+    }
+    #hstw div div p 
+    {
+        max-width: 50ch;
+        margin: auto;
+    }
+}
+@media (max-width: 1900px)
+{
+    #hsth 
+    {
+        margin: 14% 0;
+    }
+}
+@media (max-width: 1600px)
+{
+    #hsf header 
+    {
+        padding: 27px 2% 20px 6%;
+    }
+}
+
+@media (max-width: 1450px)
+{
+    #hsf
+    {
+        grid-template-columns: 1fr;
+        margin: auto;
+    }
+    #hsf header 
+    {
+        padding: 0;
+        text-align: center;
+    }
+    #hsf header p
+    {
+        margin: auto;
+    }
+    #hsth
+    {
+        display: block;
+    }
+    #hsth header ~ p
+    {
+        width: 50ch;
+    }
+    #hsth button
+    {
+        bottom: 2rem;
+    }
+}
+@media (max-width: 1300px)
+{
+    #hstw > div
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    #hstw div div
+    {
+        padding: 5% 11%;
+    }
+    #hstw div div:nth-child(2)
+    {
+        border: none;
+        border-top: 1px solid #7777773d;
+        border-bottom: 1px solid #7777773d;
+    }
+    #hstw div div img
+    {
+        max-width: 75px;
+    }
+    #hstw div div p
+    {
+        width: 65%;
+        margin: auto;
+    }
+}
+@media (max-width: 1240px)
+{
+    #hso
+    {
+        grid-template-columns: 48% auto;
+        align-items: end;
+    }
+    #hso header h1
+    {
+        width: max-content;
+    }
+}
+
+@media (max-width: 930px)
+{
+    #hso
+    {
+        align-items: center;
+
+    }
+    #hso img
+    {
+        position: relative;
+        top: 7%;
+    }
+    #hso header p
+    {
+        width: auto;
+    }
+    #hstw header h2
+    {
+        font-size: 2.5rem;
+    }
+    #hstw header p
+    {
+        width: fit-content;
+        font-size: 12px;
+    }
+    #hstw div div p
+    {
+        width: 55%;
+    }
+}
+@media (max-width: 800px)
+{
+    #hsf header h2, #hsf span
+    {
+        word-break: break-word;
+    }
+    #hsf header p 
+    {
+        width: fit-content;
+    }
+    #hsf header
+    {
+        padding: 10px 15px;
+    }
+}
+@media (max-width: 730px)
+{
+    #hso
+    {
+        grid-template-columns: 1fr
+    }
+    #hso img
+    {
+        top: 0;
+    }
+    #hso
+    {
+        margin: 0;
+    }
+    #hso header h1
+    {
+        width: auto;
+    }
+    #hstw > div, #hstw div div
+    {
+        padding: 0;
+    }
+    #hstw div div:nth-child(2)
+    {
+        margin: 20px 0;
+        padding: 20px 0;
+    }
+    #hsf 
+    {
+        margin: 0;
+    }
+}
+@media (max-width: 550px)
+{
+    #hstw div div p
+    {
+        width: fit-content;
+        padding: 0 20px;
+        text-align: center;
+    }
+    #hsf header button
+    {
+        margin-bottom: 3rem;
+    }
+}
+@media (max-width: 450px)
+{
+    #hso header h1
+    {
+        width: auto;
+    }
+    #hsf header h2
+    {
+        font-size: 2.5rem;
+    }
+    #hsf header > span:first-child
+    {
+        font-size: 0.875rem;
+    }
+    #hsth header ~ p
+    {
+        width: auto;
+        padding: 2px;
+    }
+}
+@media (max-width: 425px)
+{
+    #hsth header h4
+    {
+        font-size: 2.25rem;
+    }
+    #hsth > div img
+    {
+        width: 80% !important;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 280px)
+{
+    #hsf header h2
+    {
+        word-break: normal;
+    }
+}

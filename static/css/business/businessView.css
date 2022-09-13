@@ -1,0 +1,129 @@
+#content.viewApp header {
+    margin-bottom: 1rem;
+}
+
+#content.viewApp p.text {
+    font-weight: 600;
+    color: rgb(39, 39, 39);
+    width: 50ch;
+    margin-bottom: 5px;
+}
+#content.viewApp p.text > span {
+    font-weight: 400 !important;
+}
+
+#content.viewApp > div {
+    margin: 1rem 0;
+}
+
+#content.viewApp h2 {
+    font-size: 1.1rem;
+}
+
+#content.viewApp ul {
+    margin-left: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.searchBar .bi-arrow-right-square-fill
+{
+    color: #afafaf;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: -34px;
+    transition: all 250ms ease;
+}
+.searchBar .bi-arrow-right-square-fill:hover
+{
+    transform: scale(0.9);
+    color: var(--cbl);
+    transition: all 500ms ease;
+}
+/* DASHBOARD */
+.dashboardButtons
+{
+    display: flex;
+    grid-column-gap: 2rem;
+}
+.dashboardButtons span.text
+{
+    display: flex;
+    align-items: center;
+    grid-column-gap: 10px;
+    padding: 10px;
+    border: 1px solid #3838381f;
+    background: #f1f1f1;
+    font-weight: 700;
+    color: var(--cg);
+    cursor: pointer;
+    box-shadow: -1px 2px 2px #cacaca85;
+    transition: var(--ftr)
+}
+.dashboardButtons span.text:hover
+{
+    transform: scale(0.97);
+    transition: var(--str);
+    color: white;
+    background: var(--cbl);
+    border: 1px solid var(--cbl);
+    box-shadow: -2px 2px 9px #48454578;
+}
+.dashboardButtons span.text[name="delete"]:hover
+{
+    background: var(--cr);
+    border: 1px solid var(--cr);
+}

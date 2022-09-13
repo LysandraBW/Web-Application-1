@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../static/css/business/businessAll.css">
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <!-- Scripts -->
+    <script src="../../static/scripts/business/actions.js"></script>
+    <script src="../../static/scripts/business/userProfile.js"></script>
+    <script src="../../static/scripts/business/agenda.js"></script>
+    <title>Dashboard - All</title>
+</head>
+<body>
+    <section id="businessLayout">
+        <div id="userBackground"></div>
+        <div id="topLeftLogo">
+            <img src="../../static/images/nav/logogray.PNG">
+        </div>
+        <nav id="horizontalNav">
+            <span class="text"><b>Frederick Jones</b></span>
+            <div class="profilePicture"></div>
+            <div id="userProfilePopup" class="toggleAnimation">
+                <div class="userProfilePopBackground"></div>
+                <div class="profilePicture"></div>
+                <span class="text"><b>Frederick Jones</b></span>
+                <span class="text"><i>"Jinkies!"</i></span>
+                <span class="text">Owner</span>
+                <span class="text">Joined 01/23/2014</span>
+                <div class="divider"></div>
+                <span class="text">Settings</span>
+                <span class="text">Logout</span>
+            </div>
+        </nav>
+        <nav id="verticalNav">
+            <ul>
+                <li class="headList"><span class="text headList">General</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-data selectedPath" viewBox="0 0 16 16">
+                    <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                  </svg><a class="text selectedPath" href="">Dashboard</a></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-date" viewBox="0 0 16 16">
+                    <path d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z"/>
+                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                  </svg><a class="text" href="">Agenda</a></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                  </svg><a class="text" href="">Create an Appointment</a></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                  </svg><a class="text" href="">Edit an Appointment</a></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5zm0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h-1z"/>
+                  </svg><a class="text" href="">Estimate Quote</a></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                  </svg><a class="text" href="">View Mechanics</a></li>
+            </ul>
+            <ul>
+                <li class="headList"><span class="text headList">Account</span></li>
+                <li class="text" style="display: block">Current Balance:<br>$42,104.55<i class="profitSymbol">+62.3%</i></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
+                    <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5zm0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78h4.723zM5.048 3.967c-.03.021-.058.043-.087.065l.087-.065zm-.431.355A4.984 4.984 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8 4.617 4.322zm.344 7.646.087.065-.087-.065z"/>
+                  </svg><a class="text" href="">Settings</a></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                  </svg><a class="text" href="">Logout</a></li>
+            </ul>
+        </nav>
+        <section id="content">
+            <header id="agendah">
+                <h1 class="hdr">AGENDA</h1>
+                <p class="text">Random text here. Random text here.</p>
+            </header>
+            <section id="agenda">
+                <div id="sideAgenda">
+                    <header>
+                        <h1 class="text">Navigation</h1>
+                        <h3 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h3>
+                    </header>
+                    <form method="POST" action="/agenda" id="miniCalendar">
+                        <section>
+                            <div style="position: relative;">
+                                <span name="chooseMonth" class="text textLink">November</span>
+                                <ul name="selectMonth">
+                                    <li class="text" name="January">January</li>
+                                    <li class="text" name="February">February</li>
+                                    <li class="text" name="March">March</li>
+                                    <li class="text" name="April">April</li>
+                                    <li class="text" name="May">May</li>
+                                    <li class="text" name="June">June</li>
+                                    <li class="text" name="July">July</li>
+                                    <li class="text" name="August">August</li>
+                                    <li class="text" name="September">September</li>
+                                    <li class="text" name="October">October</li>
+                                    <li class="text" name="November">November</li>
+                                    <li class="text" name="December">December</li>
+                                </ul>
+                            </div>
+                            <div style="position: relative;">
+                                <span name="chooseYear" class="text textLink">2021</span>
+                                <ul name="selectYear">
+                                    <li class="text" name="2022">2022</li>
+                                    <li class="text" name="2021">2021</li>
+                                    <li class="text" name="2020">2020</li>
+                                    <li class="text" name="2019">2019</li>
+                                    <li class="text" name="2018">2018</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <div id="calendar">
+                                <span class="day nameDay text" name="1">SU</span>
+                                <span class="day nameDay text" name="1">MO</span>
+                                <span class="day nameDay text" name="1">TU</span>
+                                <span class="day nameDay text" name="1">WE</span>
+                                <span class="day nameDay text" name="1">TH</span>
+                                <span class="day nameDay text" name="1">FR</span>
+                                <span class="day nameDay text" name="1">SA</span>
+                                <span class="day text nameDay">30</span>
+                                <span class="day text nameDay">31</span>
+                                <span class="day text" name="01">1</span>
+                                <span class="day text" name="02">2</span>
+                                <span class="day text" name="03">3</span>
+                                <span class="day text" name="04">4</span>
+                                <span class="day text" name="05">5</span>
+                                <span class="day text" name="06">6</span>
+                                <span class="day text" name="07">7</span>
+                                <span class="day text" name="08">8</span>
+                                <span class="day text" name="09">9</span>
+                                <span class="day text" name="10">10</span>
+                                <span class="day text" name="11">11</span>
+                                <span class="day text" name="12">12</span>
+                                <span class="day text" name="13">13</span>
+                                <span class="day text" name="14">14</span>
+                                <span class="day text" name="15">15</span>
+                                <span class="day text" name="16">16</span>
+                                <span class="day text" name="17">17</span>
+                                <span class="day text" name="18">18</span>
+                                <span class="day text" name="19">19</span>
+                                <span class="day text" name="20">20</span>
+                                <span class="day text" name="21">21</span>
+                                <span class="day text" name="22">22</span>
+                                <span class="day text" name="23">23</span>
+                                <span class="day text" name="24">24</span>
+                                <span class="day text" name="25">25</span>
+                                <span class="day text" name="26">26</span>
+                                <span class="day text" name="27">27</span>
+                                <span class="day text" name="28">28</span>
+                                <span class="day text" name="29">29</span>
+                                <span class="day text" name="30">30</span>
+                                <span class="day text" name="31">31</span>
+                        </div>
+                        <input type="hidden" name="month">
+                        <input type="hidden" name="day">
+                        <input type="hidden" name="year">
+                        <div class="searchAppt"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                        </svg></div>
+                    </form>
+                    <div id="createMeeting">
+                        <span class="text textLink"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus textLink" viewBox="0 0 16 16">
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                          </svg></span>
+                        <span class="text textLink">Create Meeting</span>
+                    </div>
+                    <section id="categories">
+                        <h1 class="text">View Categories</h1>
+                        <h3 class="text">View the categories below. The colors shown correspond to the actual meeting. </h3>
+                        <div>
+                            <div class="roundSquare liBlue"></div>
+                            <p class="text">General Appointment</p>
+                        </div>
+                        <div>
+                            <div class="roundSquare liOrange"></div>
+                            <p class="text">Customer Drop-Off</p>
+                        </div>
+                        <div>
+                            <div class="roundSquare liGreen"></div>
+                            <p class="text">Customer Pick-Up</p>
+                        </div>
+                        <div>
+                            <div class="roundSquare liRed"></div>
+                            <p class="text">Maintenance Check/Repairment</p>
+                        </div>
+                        <div>
+                            <div class="roundSquare liPurple"></div>
+                            <p class="text">Meeting</p>
+                        </div>
+                        <div>
+                            <div class="roundSquare norBlue"></div>
+                            <p class="text">Other</p>
+                        </div>
+                    </section>
+                    <div id="displayMeet">
+                        <h1 class="text">Meetings</h1>
+                        <h3 class="text">{{currentDate}}</h3>
+                        <h3 class="text">Current viewing all appointments. </h3>
+                        {% for meeting in meetings %}
+                        <div class="meetingBox" name="{{meeting[0]}}">
+                            
+                            {% if meeting[5] == "Other" %}
+                                <span class="circle norBlue"></span>
+                                <span class="text categoryLabel norBlue" name="categoryName">MEETING</span>
+                            {% elif meeting[5] == "Meeting" %}
+                                <span class="circle liPurple"></span>
+                                <span class="text categoryLabel liPurple" name="categoryName">MEETING</span>
+                            {% elif meeting[5] == "Maintenance Check/Repairment" %}
+                                <span class="circle liRed"></span>
+                                <span class="text categoryLabel liRed" name="categoryName">MEETING</span>
+                            {% elif meeting[5] == "Customer Pick-Up" %}
+                                <span class="circle liGreen"></span>
+                                <span class="text categoryLabel liGreen" name="categoryName">MEETING</span>
+                            {% elif meeting[5] == "Customer Drop-Off" %}
+                                <span class="circle liOrange"></span>
+                                <span class="text categoryLabel liOrange" name="categoryName">MEETING</span>
+                            {% elif meeting[5] == "General Appointment" %}
+                                <span class="circle liBlue"></span>
+                                <span class="text categoryLabel liBlue" name="categoryName">MEETING</span>
+                            {% endif %}
+                            <h4 class="text">{{meeting[1]}}</h4>
+                            <p class="text">{{meeting[3]}}</p>
+                            <p class="text">{{meeting[4]}}</p>
+                            <button class="text deleteAppt"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash2-fill" viewBox="0 0 16 16">
+                                <path d="M2.037 3.225A.703.703 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2a.702.702 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671L2.037 3.225zm9.89-.69C10.966 2.214 9.578 2 8 2c-1.58 0-2.968.215-3.926.534-.477.16-.795.327-.975.466.18.14.498.307.975.466C5.032 3.786 6.42 4 8 4s2.967-.215 3.926-.534c.477-.16.795-.327.975-.466-.18-.14-.498-.307-.975-.466z"/>
+                              </svg></button>
+                            <button class="text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                              </svg></button>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div id="agendaPart">
+                    <h1 class="text">{{currentDate}}<br><i>Viewing all appointments</i></h1>
+                    <div class="meetingContainer" style="display: flex; flex-wrap: wrap">
+                        {% for meeting in meetings %}
+                        <div class="meeting">
+                            {% if meeting[5] == "Other" %}
+                                <div class="meetingInfo normalBlue">
+                            {% elif meeting[5] == "Meeting" %}
+                                <div class="meetingInfo lightPurple">
+                            {% elif meeting[5] == "Maintenance Check/Repairment" %}
+                                <div class="meetingInfo lightRed">
+                            {% elif meeting[5] == "Customer Pick-Up" %}
+                                <div class="meetingInfo lightGreen">
+                            {% elif meeting[5] == "Customer Drop-Off" %}
+                                <div class="meetingInfo lightOrange">
+                            {% elif meeting[5] == "General Appointment" %}
+                                <div class="meetingInfo lightBlue">
+                            {% endif %}
+                                <p class="text"><span class="clock"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                                  </svg></span>{{meeting[3]}}</p>
+                                <h3 class="text">{{meeting[1]}}</h3>
+                                <p class="text">{{meeting[4]}}</p>
+                        </div>   
+                    </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            
+                <form method = "POST" action="/agenda/create" id="popupCreate" style="display: none;">
+                    <h2 class="text">Create Meeting: </h2>
+                    <div>
+                        <span class="text">Name:</span>
+                        <input class="text" name="meetingName" placeholder="Name of meeting" type="text">
+                        <span class="error text">Please enter more than 3 characters and/or numbers.</span>
+                    </div>
+                    <div>
+                        <span class="text">Date:</span>
+                        <input class="text" name="meetingDate" placeholder="Format: 00/00/0000" type="text">
+                        <span class="error text">Please enter the date in the specified format.</span>
+                    </div>
+                    <div>
+                        <span class="text">Time:</span>
+                        <input class="text" name="meetingTime" placeholder="Format: 00:00 AM/PM" type="text">
+                        <span class="error text">Please enter the time in the specified format.</span>
+                    </div>
+                    <div>
+                        <span class="text">Description:</span>
+                        <textarea class="text" name="meetingDesc" placeholder="Description"></textarea>
+                    </div>
+                    <div>
+                        <label  class="text" for="chooseCat">Select Category:</label>
+                        <select class="text" id="chooseCat" name="category">
+                            <option value="Customer Appointment" class="text">Customer Appointment</option>
+                            <option value="Customer Drop-Off" class="text">Customer Drop-Off</option>
+                            <option value="Customer Pick-Up" class="text">Customer Pick-Up</option>
+                            <option value="Maintenance Check/Repairment" class="text">Maintenance Check/Repairment</option>
+                            <option value="Meeting" class="text">Meeting</option>
+                            <option value="Other" class="text">Other</option>
+                        </select>
+                    </div>
+                    <div class="buttonContainer">
+                        <button class="text" name="cancelCreate" onsubmit="return false">Cancel</button>
+                        <button class="text" name="createAppt">Create</button>
+                    </div>
+                </form>
+                <form method="POST"  action="/agenda/delete" id="deleteMeeting" style="display: none;">
+                    <h2 class="text">Delete Meeting</h2>
+                    <p class="text">Are you sure you want to<span> delete</span> this appointment? This action is not reversible.</p>
+                    <div class="buttonContainer">
+                        <button class="text" name="cancelDelete">Cancel</button>
+                        <button class="text">Delete</button>
+                    </div>
+                    <input name="categoryMeeting" type="hidden">
+                    <input name="idMeeting" type="hidden">
+                </form>
+            </section>
+        </section>    
+    </section>
+</body>
+</html>

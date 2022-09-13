@@ -1,0 +1,363 @@
+#dashboardContainer
+{
+    padding: 2rem 5px;
+}
+/* HEADER */
+.circle
+{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: var(--cbl);
+    display: inline-block;
+}
+/* STATUS CONTAINER */
+#dashboardContainer .statusContainer
+{
+    display: flex;
+    grid-column-gap: 2rem;
+}
+#dashboardContainer .statusContainer span
+{
+    font-weight: 700;
+    padding-bottom: 0;
+    position: relative;
+}
+#dashboardContainer .statusContainer span a
+{
+    color: var(--cg);
+    border-bottom: none !important;
+}
+#dashboardContainer .statusContainer span::before {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    bottom: -1px;
+    content: '';
+    display: block;
+    height: 2px;
+    left: -8px;
+    margin: 0 8px;
+    position: absolute;
+    right: -8px;
+    background: black;
+    display: none !important;
+}
+/*SEARCH BAR AND BUTTONS CONTAINER */
+.searchBarButtonContainer
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #c1c1c12e;
+    padding: 30px 15px;
+}
+/* SEARCH BAR */
+#dashboardContainer .searchBar
+{
+    display: grid;
+    grid-template-columns: auto min-content;
+    align-items: center;
+}
+#dashboardContainer input[type="text"]
+{
+    padding: 10px 40px 10px 12px;
+    box-shadow: -1px 2px 2px #cacaca85;
+}
+#dashboardContainer .searchBar .bi-arrow-right-square-fill
+{
+    color: #afafaf;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: -34px;
+    transition: all 250ms ease;
+}
+#dashboardContainer .searchBar .bi-arrow-right-square-fill:hover
+{
+    transform: scale(0.9);
+    color: var(--cbl);
+    transition: all 500ms ease;
+}
+/* DASHBOARD */
+#dashboardContainer .dashboardButtons
+{
+    display: flex;
+    grid-column-gap: 2rem;
+}
+#dashboardContainer .dashboardButtons span.text
+{
+    display: flex;
+    align-items: center;
+    grid-column-gap: 10px;
+    padding: 10px;
+    border: 1px solid #3838381f;
+    background: #f1f1f1;
+    font-weight: 700;
+    color: var(--cg);
+    cursor: pointer;
+    box-shadow: -1px 2px 2px #cacaca85;
+    transition: var(--ftr)
+}
+#dashboardContainer .dashboardButtons span.text:hover
+{
+    transform: scale(0.97);
+    transition: var(--str);
+    color: white;
+    background: var(--cbl);
+    border: 1px solid var(--cbl);
+    box-shadow: -2px 2px 9px #48454578;
+}
+#dashboardContainer .dashboardButtons span.text[name="delete"]:hover
+{
+    background: var(--cr);
+    border: 1px solid var(--cr);
+}
+.literalDashboard
+{
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Classes used to put onto elements 
+font-size: 8px;
+    font-weight: 700;
+
+
+*/
+.selected
+{
+    color: var(--cbl) !important;
+    border-bottom: 1px solid var(--cbl);
+}
+.titleAppointment
+{
+    border-bottom: 1px solid #e8e8e8;
+}
+.titleAppointment span.text
+{
+    background: none;
+    color: gray;
+    font-weight: 400;
+}
+.appointmentStyle
+{
+    display: grid;
+    grid-template-columns: min-content 50px 200px repeat(5, 1fr);
+    grid-column-gap: 10px;
+    align-items: center;
+    padding: 5px 5px;
+}
+.appointmentStyle input[type="checkbox"]
+{
+    margin-right: 20px;
+}
+.singleAppointments
+{
+    background: none;
+    transition: var(--ftr);
+    cursor: pointer;
+}
+.singleAppointments:hover
+{
+    background: #e4e4e4 !important;
+    box-shadow: -4px 3px 6px 0px #4c4c4c38;
+    transition: var(--ftr);
+}
+.alreadyViewed 
+{
+    background: #ecececa3 !important;
+}
+.notViewed
+{
+    font-weight: bold;
+}
+
+
+#content .literalDashboard div.notViewed > span.text:nth-child(3), #content .literalDashboard div > span.text:nth-child(5), #content .literalDashboard div > span.text:nth-child(6), #content .literalDashboard div > span.text:nth-child(7)
+{
+    display: flex;
+    align-items: center;
+    grid-column-gap: 5px;
+}
+.newAppointment
+{
+    background: #DE3C4B;
+    color: white;
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 10px;
+    font-size: 8px;
+    font-weight: 700;
+}
+.todayAppointment
+{
+    background: #4DA167;
+    color: white;
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 10px;
+    font-size: 8px;
+    font-weight: 700;
+}
+.statusSymbol 
+{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #afafaf;
+    border-radius: 50%;
+}
+/*#4dc2c7*/
+.tomorrowAppointment
+{
+    background: #3E92CC;
+    color: white;
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 10px;
+    font-size: 8px;
+    font-weight: 700;
+}
+.soonAppointment
+{
+    background: #048BA8;
+    color: white;
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 10px;
+    font-size: 8px;
+    font-weight: 700;
+}
+.extraServices
+{
+    color: black;
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 10px;
+    font-size: 9px;
+    font-weight: 900;
+    text-shadow: 0px 0px black;
+}

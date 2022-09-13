@@ -1,0 +1,458 @@
+#agenda {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-column-gap: 2rem;
+}
+#agenda h3.text {
+    font-weight: 400;
+    color: var(--cg);
+}
+header#agendah h1 {
+    font-size: 2.35rem;
+}
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 30px);
+    grid-gap: 5px 10px;
+    position: relative;
+}
+#calendar .day {
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    padding: 4px;
+    font-weight: 600;
+    color: #4a4646b3;
+    cursor: pointer;
+    transition: var(--ftr);
+    border-radius: 15px;
+}
+#miniCalendar .nameDay {
+    cursor: default !important;
+    color: #c7c7c7;
+    font-size: 11px;
+    background: #efefef;
+    border-radius: 0px;
+}
+#miniCalendar div.searchAppt {
+    position: absolute;
+    right: -65px;
+    top: 50%;
+    cursor: pointer;
+    transition: var(--ftr);
+}
+#miniCalendar .searchAppt > svg {
+    width: 65px;
+    height: 35px;
+    color: #adadad7d;
+    transition: var(--ftr);
+}
+
+/* https://cs.uwaterloo.ca/~alopez-o/math-faq/node73.html 
+https://dribbble.com/shots/6737566-BMW-Competence-Game-Calendar
+*/
+#agendaPart {
+    padding: 1rem;
+    background: #dddddd4a;
+    border-radius: 8px;
+    border: none !important;
+    background: #8c8aa517 !important;
+    margin-top: 40px;
+    
+}
+header#agendah, #agenda {
+    margin: 0 6rem 0 3rem;
+}
+form#popupCreate {
+    background: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    display: grid;
+    grid-row-gap: 1rem;
+}
+form#miniCalendar, div.meetingBox, #categories > div {
+    background: #8c8aa517 !important;
+    border: 1px solid #dddddd !important;
+}
+#sideAgenda > header:nth-child(1) {
+    margin: 40px 0 30px 0;
+}
+#sideAgenda > header:nth-child(1) h1 {
+    font-size: 20px;
+    font-weight: 400;
+}
+form#miniCalendar {
+    width: fit-content;
+    padding: 15px 10px;
+    border-radius: 8px;
+    background: rgba(170, 165, 165, 0.13);
+    border: 1px solid #80808080;
+    position: relative;
+}
+form#miniCalendar > section:nth-child(1) {
+    border-bottom: 1px solid #28319421;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+form#miniCalendar ul {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 10px 0px;
+    box-shadow: -2px 2px 5px #00000026, -7px 12px 20px #00000036;
+    border-radius: 5px;
+    top: 32px;
+    z-index: 10;
+}
+form#miniCalendar ul > li {
+    padding: 6px 10px;
+    color: var(--cg);
+    font-weight: 500;
+    cursor: pointer;
+}
+form#miniCalendar ul > li:hover {
+    background: #006ee6;
+    color: white;
+}
+form#miniCalendar section {
+    display: flex;
+    justify-content:space-between
+}
+form#miniCalendar section span.text {
+    font-weight: 600;
+    color: #565454;
+    cursor: pointer;
+}
+#agendaPart h1.text {
+    padding: 10px 0px;
+    border-bottom: 1px solid #cbcbcb9f;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+#agendaPart h1.text > i {
+    position: relative;
+    top: -14px;
+    font-style: normal;
+    font-weight: bold;
+    color: #7c7c7c;
+}
+#agendaPart h1 i {
+    font-size: 14px;
+    font-weight: 400;
+}
+#agendaPart .meeting {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    padding: 10px 0;
+    grid-column-gap: 0.75rem;
+}
+#agendaPart .meeting h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+span.clock > svg {
+    width: 13px;
+}
+#agendaPart .meetingInfo {
+    padding: 22px 24px;
+    border-radius: 8px;
+}
+#agendaPart .meeting h3, #agendaPart .meeting p {
+    color: white;
+}
+#agendaPart > div > div.meetingInfo > p.text:nth-child(1) > span > svg {
+    width: 12px;
+}
+form#miniCalendar, div.meetingBox, #deleteMeeting {
+    border: none !important;
+    background: #8c8aa517 !important
+}
+#agendaPart .meetingInfo p:nth-child(1) {
+    font-size: 12px;
+    font-weight: 900;
+}
+#agendaPart .block {
+    background: #63636357;
+}
+#createMeeting {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+#createMeeting > span:nth-child(1), #createMeeting > span:nth-child(1) > svg {
+    height: 25px;
+    width: 25px;
+    color: #261d1db3;
+}
+#createMeeting > span.text {
+    font-weight: 600;
+    color: #261d1db3;
+    cursor: pointer;
+}
+#displayMeet {
+    margin-top: 2rem;
+}
+#displayMeet > h1.text {
+    font-size: 20px;
+    font-weight: 400;
+}
+#displayMeet > h2.text {
+    color: #1a1717bf;
+}
+div.meetingBox {
+    margin: 2rem 10rem 2rem 0;
+    border: 1px solid #80808085;
+    background: rgba(170, 165, 165, 0.13);
+    border-radius: 8px;
+    padding: 10px;
+
+}
+div.meetingBox span.circle {
+    width: 5px;
+    height: 5px;
+    background: gray;
+}
+div.meetingBox button {
+    background: none !important;
+    margin: 0;
+    padding: 10px 10px 0 0 !important;
+}
+div.meetingBox button > svg {
+    color: #484444eb;
+}
+div.meetingInfo > p.text:nth-child(1) {
+    display: flex;
+    grid-gap: 0 5px;
+}
+div.meetingInfo > p:nth-child(3) {
+    max-width: 767px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.categoryLabel {
+    font-size: 9px !important;
+    font-weight: 800;
+}
+span.text.categoryLabel {
+    background: none !important;
+}
+#categories {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    grid-row-gap: 0.25rem;
+    flex-wrap: wrap;
+    grid-column-gap: 1rem;
+}
+
+#categories > h1 {
+    font-size: 20px;
+    font-weight: 400;
+}
+#categories > h3 {
+    margin: 0 0 15px 0;
+}
+#categories > div {
+    background: #80808033;
+    padding: 5px 10px 5px 8px;
+    width: fit-content;
+    border-radius: 4px; 
+    border: none !important;
+}
+#categories > div {
+    display: flex;
+    grid-gap: 0 5px;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+.roundSquare {
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    background: #7e7e7e65;
+}
+
+#popupCreate, #deleteMeeting {
+    box-shadow: -2px 2px 5px #00000026, -7px 12px 20px #00000036;
+    display: none;
+}
+#popupCreate {
+    text-align: left !important;
+}
+#popupCreate h2,  #deleteMeeting h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+#popupCreate > div span, #popupCreate label {
+    color: var(--cg);
+    font-weight: 500 !important;
+}
+#popupCreate div.buttonContainer, #deleteMeeting div.buttonContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#popupCreate button:nth-child(1), #deleteMeeting button:nth-child(1) {
+    background: none !important;
+    color: #6c7681;
+}
+#popupCreate button {
+    font-size: 16px;
+    background: #006ee6 !important;
+}
+#deleteMeeting, #popupCreate {
+    position: fixed;
+    width: max-content;
+    background: white !important;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+#deleteMeeting {
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 0.75rem;
+}
+#deleteMeeting p > span {
+    color: #e51111;
+    font-weight: 600;
+}
+#deleteMeeting button:nth-child(2) {
+    background: #cc0e0e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#agenda input[type="text"], #agenda select, #agenda textarea
+{
+    border: 1px solid #7777775c;
+    padding: 10px 12px;
+    border-radius: 4px;
+    width: 100%;
+}
+#agenda textarea
+{
+    resize: none;
+    width: 100%;
+    height: 100px;
+}
+#agenda button
+{
+    border-radius: 3px;
+    padding: 10px 16px;
+    background: var(--cbl);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+}
+#agenda input:focus, #agenda select:focus, #agenda textarea:focus
+{
+    outline: none;
+}
+.badInputEffect {
+    background: #ff98982b;
+    outline: 2px dashed #ffcbcb;
+    border: none !important;
+}
+
+/* EFFECTS */
+div#calendar > span:not(.nameDay):hover {
+    background: #006ee6;
+    color: white;
+}
+.textLink:hover {
+    color: #006ee6 !important;
+    text-decoration: underline;
+}
+
+.clickedDayEffect {
+    background: #006ee6;
+    color: white !important;
+}
+#createMeeting:hover span svg, #createMeeting:hover span {
+    color: #006ee6 !important;
+    text-decoration: underline;
+}
+form#miniCalendar  .searchAppt:hover > svg {
+    color: #006ee6 !important;
+    transform: scale(0.9);
+    transition: var(--ftr);
+}
+
+form#popupCreate span.error.text {
+    font-weight: 700 !important;
+    color: #ff000087;
+    display: none;
+}
+
+/* COLOR BOXES */
+.lightBlue {
+    background: #1780db4d;
+    box-shadow: -1px 2px 7px #158de37a;
+}
+.lightOrange {
+    background: #ff8d0073;
+    box-shadow: -1px 2px 7px #f3bc58;
+}
+.lightGreen {
+    background: #27ab1866;
+    box-shadow: -1px 2px 7px #8dd784d9;
+}
+.lightPurple {
+    background: #2c00df69;
+    box-shadow: -1px 2px 7px #8343ffd9;
+}
+.lightRed {
+    background: #f73e5873;
+    box-shadow: -1px 2px 7px #ff7373e0;
+}
+.normalBlue {
+    background: #006ee66b;
+    box-shadow: -1px 2px 7px #469fff;
+}
+.liBlue {
+    background: #1780db !important;
+    color: #1780db !important;
+}
+.liOrange {
+    background: #ff8c00 !important;
+    color: #ff8c00 !important;
+}
+.liGreen {
+    background: #62c133 !important;
+    color: #62c133 !important;
+}
+.liPurple {
+    background: #2d00df !important;
+    color: #2d00df !important;
+}
+.liRed {
+    background: #f73e57 !important;
+    color: #f73e57 !important;
+}
+.norBlue {
+    background: #006fe6 !important;
+    color: #006fe6 !important;
+}
+

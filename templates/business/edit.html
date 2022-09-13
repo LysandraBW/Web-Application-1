@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../static/css/business/businessAll.css">
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <!-- Scripts -->
+    <script src="../../static/scripts/business/actions.js"></script>
+    <script src="../../static/scripts/business/userProfile.js"></script>
+    <script src="../../static/scripts/business/load.js"></script>
+    <script src="../../static/scripts/business/time.js"></script>
+    <script src="../../static/scripts/business/selected.js"></script>
+    <script src="../../static/scripts/business/load_data.js"></script>
+    <script src="../../static/scripts/business/editSubmit.js"></script>
+    <title>Edit an Appointment</title>
+</head>
+<body>
+    <input type="hidden" name="LOAD_DATA" value='{{ data }}'>
+    <section id="businessLayout">
+        <div id="userBackground"></div>
+        <div id="topLeftLogo">
+            <img src="../../static/images/nav/logogray.PNG">
+        </div>
+        <nav id="horizontalNav">
+            <span class="text"><b>Frederick Jones</b></span>
+            <div class="profilePicture"></div>
+            <div id="userProfilePopup" class="toggleAnimation">
+                <div class="userProfilePopBackground"></div>
+                <div class="profilePicture"></div>
+                <span class="text"><b>Frederick Jones</b></span>
+                <span class="text"><i>"Jinkies!"</i></span>
+                <span class="text">Owner</span>
+                <span class="text">Joined 01/23/2014</span>
+                <div class="divider"></div>
+                <span class="text">Settings</span>
+                <span class="text">Logout</span>
+            </div>
+        </nav>
+        <nav id="verticalNav">
+            <ul>
+                <li class="headList"><span class="text headList">General</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-data" viewBox="0 0 16 16">
+                    <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                  </svg><a class="text" href="/dashboard">Dashboard</a></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-date" viewBox="0 0 16 16">
+                    <path d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z"/>
+                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                  </svg><a class="text" href="">Agenda</a></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                  </svg><a class="text" href="">Create an Appointment</a></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square selectedPath" viewBox="0 0 16 16">
+                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                  </svg><a class="text selectedPath" href="/edit">Edit an Appointment</a></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5zm0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h-1z"/>
+                  </svg><a class="text" href="">Estimate Quote</a></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                  </svg><a class="text" href="">View Mechanics</a></li>
+            </ul>
+            <ul>
+                <li class="headList"><span class="text headList">Account</span></li>
+                <li class="text" style="display: block">Current Balance:<br>$42,104.55<i class="profitSymbol">+62.3%</i></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
+                    <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5zm0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78h4.723zM5.048 3.967c-.03.021-.058.043-.087.065l.087-.065zm-.431.355A4.984 4.984 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8 4.617 4.322zm.344 7.646.087.065-.087-.065z"/>
+                  </svg><a class="text" href="">Settings</a></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                  </svg><a class="text" href="">Logout</a></li>
+            </ul>
+        </nav>
+        <section id="editA">
+            <header class="editAoverwrite">
+                <h1 class="hdr">Edit an Existing Appointment</h1>
+                <p class="text">Edit the information of an existing appointment here. If you would like to view another appointment, simply search for a new one via the appointment ID.</p>
+            </header>
+            <form method="POST" action="/edit" id="searchAppointment">
+                <input class="text" type="text" name="appointmentID" placeholder="Enter ID" spellcheck="false">
+                <input type="hidden" name="action" value="edit">
+                <button name='find' class="text">Find Appointment</button>
+            </form>
+            {% if found == 0 %}
+                <p class="text editAError" style="display: block !important; width: 80ch">No appointment with this ID was found. Please make sure to enter a valid ID.</p>
+                <section id="editForm" style="visibility: hidden !important; padding-bottom: 50rem">
+            {% else %}
+                <section id="editForm">
+                <header>
+                    <h1 class="text">Editing {{firstName}} {{lastName}}'s Appointment:</h1>
+                    <p class="text">You are currently editing appointment ID {{id}}. Make sure to save the changes you have made at the end!</p>
+                </header>
+                <p class="mainError text" style="display: none; width: 80ch">Please ensure you have entered valid information.</p>
+                <form id="editAppointment" method="POST" action="/edit/save">
+                    <div class="personal">
+                        <h2 class="text">Personal Information: </h2>
+                        <div>
+                            <label class="text">First Name:</label>
+                            <input type="text" name="firstName" class="text">
+                        </div>
+                        <div>
+                            <label class="text">Last Name:</label>
+                            <input type="text" name="lastName" class="text">
+                        </div>
+                        <div>
+                            <label class="text">Email Address:</label>
+                            <input type="text" name="emailAddress" class="text">
+                        </div>
+                        <div>
+                            <label class="text">Phone Number:</label>
+                            <input type="text" name="phoneNumber" class="text">
+                        </div>
+                        <div>
+                            <label class="text">Contact Preference: </label>
+                            <select class="text" name="contactPreference">
+                                <option selected disabled></option>
+                                <option value="Call">Call</option>
+                                <option value="Text">Text</option>
+                                <option value="Email">Email</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="vehicle">
+                        <h2 class="text">Vehicle Information: </h2>
+                        <div>
+                            <label class="text">VIN:</label>
+                            <input type="text" name="VIN" class="text">
+                        </div>
+                        <div>
+                            <label class="text">Car Make: </label>
+                            <select class="text b" name="carMake">
+                                <option selected disabled>Make</option>
+                                
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text">Car Model: </label>
+                            <select class="text c" name="carModel">
+                                <option selected disabled>Model</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text">Car Year: </label>
+                            <select class="text d" name="carYear">
+                                <option selected disabled>Year</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text">License Plate:</label>
+                            <input type="text" name="licensePlate" class="text">
+                        </div>
+                        <div>
+                            <label class="text">Mileage:</label>
+                            <input type="text" name="mileage" class="text">
+                        </div>
+                    </div>
+                    <div class="services">
+                        <h2 class="text">Services: </h2>
+                        <section>
+                            <div>
+                                <label class="text">Select Services: </label>
+                                <select class="text" name="services">
+                                    <option selected disabled></option>
+                                    <option value="Air Conditioning">Air Conditioning</option>
+                                    <option value="Brakes">Brakes</option>
+                                    <option value="Computer Diagnostics">Computer Diagnostics</option>
+                                    <option value="Engine Repair">Engine Repair</option>
+                                    <option value="Replacements">Replacements</option>
+                                    <option value="Tire Repair">Tire Repair</option>
+                                    <option value="Tune-Up/Maintenance Check">Tune-Up/Maintenance Check</option>
+                                    <option value="Transmission Repair">Transmission Repair</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="text">Add Any Additional Charges:</label>
+                                <input type="text" class="text" name="additionalCharge" placeholder="e.g. 3x Water Pump">
+                            </div>
+                            <div>
+                                <label class="text">Selected Service(s):</label>
+                                <ul class="servicesList">
+                                    <!--<li class="text" value="Service 1"><i>Service 1</i><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></span></li>-->
+                                </ul>
+                            </div>
+                            
+                        </section>
+                        <input type="hidden" name="saveServices">
+                        <input type="hidden" name="ID" value="{{id}}">
+                    </div>
+                    <div class="appointment">
+                        <h2 class="text">Appointment Information: </h2>
+                        <div>
+                            <label class="text">Customer Availability: </label>
+                            <textarea class="text" name="availability"></textarea>
+                        </div>
+                        <div>
+                            <label class="text">Other Information: </label>
+                            <textarea class="text" name="other-customer"></textarea>
+                        </div>
+                        <div>
+                            <label class="text">Other Information (Employee): </label>
+                            <textarea class="text" name="other-employee"></textarea>
+                        </div>
+                        <div>
+                            <label class="text">Appointment Status: </label>
+                            <select class="text" name="status">
+                                <option selected disabled></option>
+                                <option value="In Progress">In Progress</option>
+                                <option value="Confirmed">Confirmed</option>
+                                <option value="Under Repair">Under Repair</option>
+                                <option value="Completed">Completed</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text">Appointment Date: </label>
+                            <section class="horizontalDate">
+                                <div class="dateInputFormat five">
+                                    <select class="text dropMonth" name="month">
+                                        <option selected disabled></option>
+                                    </select>
+                                    <span class="text slash">/</span>
+                                    <select class="text dropDay" name="day">
+                                        <option selected disabled></option>
+                                    </select>
+                                    <span class="text slash">/</span>
+                                    <select class="text dropYear" name="year">
+                                        <option selected disabled></option>
+                                    </select>
+                                </div>
+                                <span class="text at">at</span>
+                                <div class="dateInputFormat three">
+                                    <select class="text dropHour" name="hour">
+                                        <option selected disabled></option>
+                                    </select>
+                                    <span class="text semicolon" style="font-weight: 100;">:</span>
+                                    <select class="text dropMin" name="minute">
+                                        <option selected disabled></option>
+                                    </select>
+                                    <select class="text dropAMPM" name="dropAMPM">
+                                        <option selected disabled></option>
+                                        <option value="AM">AM</option>
+                                        <option value="PM">PM</option>
+                                    </select>
+                                </div> 
+
+                                <input type="hidden" name="dropDate">
+                                <input type="hidden" name="dropTime">
+                            </section>
+                                                       
+                        </div>
+                        <div>
+                            <label class="text">Pick-Up Date: </label>
+                            <section class="horizontalDate">
+                                <div class="dateInputFormat five">
+                                    <select class="text getMonth" name="month">
+                                        <option selected disabled></option>
+                                    </select>
+                                    <span class="text slash">/</span>
+                                    <select class="text getDay" name="day">
+                                        <option selected disabled></option>
+                                    </select>
+                                    <span class="text slash">/</span>
+                                    <select class="text getYear" name="year">
+                                        <option selected disabled></option>
+                                    </select>
+                                </div>
+                                <span class="text at">at</span>
+                                <div class="dateInputFormat three">
+                                    <select class="text getHour" name="hour">
+                                        <option selected disabled></option>
+                                    </select>
+                                    <span class="text semicolon" style="font-weight: 100;">:</span>
+                                    <select class="text getMin" name="minute">
+                                        <option selected disabled></option>
+                                    </select>
+                                    <select class="text getAMPM" name="getAMPM">
+                                        <option selected disabled></option>
+                                        <option value="AM">AM</option>
+                                        <option value="PM">PM</option>
+                                    </select>
+                                </div> 
+
+                                <input type="hidden" name="getDate">
+                                <input type="hidden" name="getTime">
+                            </section>
+                        </div>
+                        <div>
+                            <label class="text">Mechanic: </label>
+                            <select class="text" name="Mechanic">
+                                <option selected disabled></option>
+                                <option value="Anthony Blue">Anthony Blue</option>
+                                <option value="Brielle Earl">Brielle Earl</option>
+                                <option value="David Oswin">David Oswin</option>
+                                <option value="Isar Saad">Isar Saad</option>
+                                <option value="Mateo Greene">Justin Greene</option>
+                                <option value="John Cho">John Cho</option>
+                                <option value="Sophia Higgins">Sophia Higgins</option>
+                                <option value="William Smith">William Smith</option>
+                                <option value="Xavier Sellano">Xavier Sellano</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text">Price: </label>
+                            <input type="text" class="text" name="servicePrice">
+                        </div>
+                        <div>
+                            <label class="text">Payment Status: </label>
+                            <select class="text" name="paymentStatus">
+                                <option selected disabled></option>
+                                <option value="Unpaid">Unpaid</option>
+                                <option value="Paid">Paid</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <button name="reset" class="text" style="color: var(--cbl); background: white;">Reset Changes</button>
+                        <button name="save" class="text">Save Changes</button>
+                    </div>
+                </form>
+                </section>
+            {% endif %}
+        </section>    
+    </section>
+</body>
+</html>

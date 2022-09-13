@@ -1,0 +1,48 @@
+.other
+{
+    display: flex;
+    justify-content: space-around;
+    background: var(--cbk);
+    padding: 4rem 0;
+    flex-wrap: wrap;
+}
+.other ul
+{
+    margin: 0 6rem;
+    padding-bottom: 1rem;
+}
+.other ul li
+{
+    color: var(--cw);
+    padding: 8px 0;
+    word-break: break-word;
+}
+.other ul li svg
+{
+    position: relative;
+    top: 2px;
+}
+
+.other ul li img
+{
+    width: 45%;
+}
+@media (max-width: 1150px)
+{
+    .other
+    {
+        justify-content: flex-start;
+    }
+    .other ul:first-child
+    {
+        margin-right: 7rem;
+    }
+}
+
+@media (max-width: 450px)
+{
+    .other ul
+    {
+        margin: 0 1rem;
+    }
+}

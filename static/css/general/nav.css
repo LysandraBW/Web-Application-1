@@ -1,0 +1,145 @@
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 11%;
+    position: relative;
+    z-index: 20;
+}
+nav ul ~ ul
+{
+    display: flex;
+    align-items: center;
+}
+nav ul li a img
+{
+    height: 70px;
+    padding: 5px;
+}
+nav ul ~ ul li
+{
+    padding: 0 1.25rem;
+}
+nav ul ~ ul li + li + li + li + li
+{
+    background: white;
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid var(--cbl);
+    transition: var(--str);
+}
+nav ul ~ ul li + li + li + li + li:hover
+{
+    background: var(--cbl);
+    transition: var(--ftr);
+}
+nav ul ~ ul li + li + li + li + li > a
+{
+    transition: var(--str);
+}
+nav ul ~ ul li + li + li + li + li:hover > a
+{
+    color: var(--cw);
+    transition: var(--ftr);
+}
+/* Hiding designs for mobile navigation and setting height/width for icon */
+nav ul ~ ul ~ ul
+{
+    display: none;
+    transition: var(--str);
+}
+.bi-list
+{
+    height: 20px;
+    width: 20px;
+}
+/* Add class to create rotation animation that appears once user clicks on menu icon */
+.rotate
+{
+    transform: rotate(90deg);
+    transition: var(--ftr);
+}
+/* Switching navigation to mobile version once screen is too small */
+@media (max-width: 860px)
+{
+    /* For the purposes of jQuery, the display must be set to none */
+    .jqnm
+    {
+        display: none;
+        background: white;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        padding: 10px 11%;
+    }
+    nav ul li a img
+    {
+        width: 75%;
+        height: 75%;
+    }
+    nav > ul ~ ul
+    {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        width: 92%;
+        align-items: flex-start;
+        background: #f3f3f31f;
+        padding: 10px;
+        box-shadow: -8px 13px 18px #00000038;
+    }
+    nav ul ~ ul ~ ul
+    {
+        display: block;
+        position: relative;
+        width: auto;
+        background: var(--cw);
+        box-shadow: none;
+    }
+    nav ul ~ ul li
+    {
+        padding: 5px 0;
+        width: 100%;
+    }
+    nav ul ~ ul li::after 
+    {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: var(--cbk);
+        opacity: 0.5;
+        margin-top: 2px;
+    }
+    nav ul ~ ul li + li + li + li + li
+    {
+        width: fit-content;
+        margin-top: 10px;
+        background: var(--cbl);
+        border-radius: 6px;
+        padding: 7px;
+        border: none;
+    }
+    nav ul ~ ul li + li + li + li + li::after
+    {
+        content: none;
+    }
+    nav ul ~ ul li + li + li + li + li > a
+    {
+        color: var(--cw) !important;
+    }
+    nav ul li a
+    {
+        color: var(--cg) !important;
+        font-weight: 500 !important;
+    }
+}
+
+@media (max-width: 730px)
+{
+    nav
+    {
+        padding: 1rem 1%;
+    }
+}

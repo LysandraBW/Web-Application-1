@@ -1,0 +1,227 @@
+#sch
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 5rem 11%;
+}
+
+#sch img
+{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#sch form
+{
+    /* While I sort out the picture issue, no margin margin-left: 1rem; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.5rem;
+}
+
+#sch header h1
+{
+    font-size: 3rem;
+}
+
+#sch header h1 span
+{
+    color: var(--cbl);
+}
+
+#sch header p
+{
+    width: 60ch;
+    font-size: 13px;
+    color: var(--cg);
+}
+
+#sch header p span
+{
+    font-weight: bold;
+}
+
+#sch form > div h2
+{
+    font-size: 1rem;
+}
+
+#sch form > div > div
+{
+    position: relative;
+}
+
+#sch form button
+{
+    background: var(--cbl);
+    color: var(--cw);
+    padding: 20px 13px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    border-radius: 0;
+}
+#sch form button:hover
+{
+    cursor: pointer;
+}
+
+
+/* LAYOUT OF PERSONAL INFORMATION SECTION */
+.personalInformation > h2
+{
+    grid-area: title;
+    position: relative;
+    bottom: -15px;
+
+}
+.personalInformation
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'title title'
+    'first last'
+    'email phone';
+    grid-template-rows: 30px 57px 60px 55px;
+    grid-column-gap: 3rem;
+    grid-row-gap: 20px;
+}
+.personalInformation .displayFlex label
+{
+    margin-left: 1px;
+    margin-right: 4px;
+}
+/* LAYOUT OF VEHICLE INFORMATION SECTION */
+.vehicleInformation > h2
+{
+    grid-area: title;
+}
+.vehicleInformation .a
+{
+    grid-area: vin;
+}
+.vehicleInformation
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    'title title title'
+    'vin vin vin';
+    grid-template-rows: 20px 70px 50px;
+    grid-column-gap: 0.9rem;
+    grid-row-gap: 11px;
+}
+/* LAYOUT OF APPOINTMENT INFORMATION SECTION */
+.appointmentInformation
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 33px 100px 140px 140px;
+}
+.appointmentInformation .displayFlex > div
+{
+    margin-right: 20px;
+}
+.appointmentInformation textarea
+{
+    height: 60%;
+}
+
+/* Add this class to containers that are used for display: flex */
+.displayFlex
+{
+    display: flex;
+}
+
+/* MEDIA */
+@media (min-width: 2400px)
+{
+    #sch form
+    {
+        display: flex;
+        flex-direction: column;
+        grid-row-gap: 3.5rem;
+    }
+}
+
+@media (max-width: 1500px)
+{
+    #sch
+    {
+        display: block;
+    }
+    #sch img
+    {
+        display: none;
+    }
+    #sch .appointmentInformation
+    {
+        grid-template-rows: 33px 110px 140px 140px;
+    }
+}
+
+@media (max-width: 860px)
+{
+    #sch
+    {
+        margin: 4rem 0;
+    }
+    #sch form
+    {
+        padding: 10px 11%;
+    }
+}
+
+@media (max-width: 730px)
+{
+    #sch form 
+    {
+        padding: 10px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 550px)
+{
+    #sch header p 
+    {
+        width: auto;
+        margin-right: 35px;
+    }
+    #sch .personalInformation, #sch .vehicleInformation, #sch .appointmentInformation
+    {
+        display: flex;
+        flex-direction: column;
+        grid-row-gap: 20px;
+    }
+    #sch .vehicleInformation select
+    {
+        padding: 15px 10px;
+    }
+    #sch .appointmentInformation .displayFlex
+    {
+        display: block;
+    }
+    #sch .appointmentInformation textarea
+    {
+        height: 100px;
+    }
+    #sch button 
+    {
+        margin: 0;
+    }
+}
+
+@media (max-width: 420px)
+{
+    #sch header h1 
+    {
+        font-size: 14vw;
+    }
+    #sch header p 
+    {
+        margin-right: 0px;
+    }
+}

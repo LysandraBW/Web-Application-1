@@ -1,0 +1,116 @@
+/* BACKGROUND */
+#pbg
+{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    box-shadow: 7px 15px 20px 20px #00000033;
+}
+#pbg > div
+{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5rem;
+}
+#pbg > div:nth-child(1)
+{
+    background: var(--cbl);
+    box-shadow: inset 0px 80px 80px 80px #00000029;
+}
+#pbg > div:nth-child(1) div h1, #pbg > div:nth-child(1) button
+{
+    color: var(--cw);
+}
+#pbg > div div
+{
+    position: relative;
+    top: -225px;
+}
+#pbg > div div h1
+{
+    font-size: 3rem;
+    text-align: center;
+}
+#pbg > div:nth-child(1) button
+{
+    border: 1px solid var(--cw);
+}
+#pbg > div:nth-child(2)
+{
+    background: var(--cdr);
+    box-shadow: inset 0px 80px 80px 80px #00000029;
+}
+#pbg > div img
+{
+    width: 85%;
+}
+#pbg > div:nth-child(2) img
+{
+    transform: rotateY(180deg);
+}
+#pbg > div:nth-child(2) button
+{
+    border: 1px solid var(--cbk);
+}
+#pbg > div button
+{
+    padding: 11px 2rem;
+    font-weight: 500;
+    display: block;
+    margin: 20px auto;
+    font-size: 1rem;
+}
+
+@media (max-width: 1400px)
+{
+    #pbg > div div 
+    {
+        top: -125px;
+    }
+    #pbg > div div h1 
+    {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 800px)
+{
+    #pbg > div div 
+    {
+        top: -90px;
+    }
+    #pbg > div div h1 
+    {
+        font-size: 5vw;
+    }
+    #pbg > div button
+    {
+        font-size: 0.75rem;
+    }
+}
+@media (max-width: 700px)
+{
+    #pbg
+    {
+        flex-direction: column;
+    }
+    #pbg > div
+    {
+        width: 100vw;
+    }
+}
+@media (max-width: 555px)
+{
+    #pbg > div div 
+    {
+        top: -55px;
+    }
+}
+@media (max-width: 450px)
+{
+    #pbg > div div 
+    {
+        top: -80px;
+    }
+}

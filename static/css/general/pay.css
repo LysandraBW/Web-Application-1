@@ -1,0 +1,238 @@
+/* LAYOUT */
+#pay
+{
+    background: var(--cdbl);
+    display: grid;
+    align-items: center;
+    padding: 6rem 11% 10rem 11%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        'header header'
+        'boxOne boxTwo';
+    grid-column-gap: 2rem;
+    background-image: url(../../images/pay/triangle.png)
+}
+#pay header 
+{
+    grid-area: header;
+    margin: 3rem 0;
+}
+#pay > div, #pay form
+{
+    background: #ffffffd9;
+    padding: 3rem;
+}
+#pay > form:nth-child(2)
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'title title'
+    'first last'
+    'email num'
+    'appNum appNum'
+    'button button';
+    grid-column-gap: 1rem;
+    grid-template-rows: 35px 70px 70px 70px 65px;
+    height: fit-content;
+    box-shadow: -17px 20px 12px 1px #0000002e;
+}
+#pay > div.show
+{
+    display: block;
+}
+#pay > form:nth-child(2) > div:nth-child(6)
+{
+    grid-area: appNum;
+}
+#pay div.error, #pay div.wait, #pay div.pmt, #pay div.cpte
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -17px 20px 12px 1px #0000002e;
+    grid-row-gap: 1rem;
+}
+#pay div.pmt
+{
+    grid-row-gap: 1rem;
+}
+
+
+
+
+
+
+/* NOT LAYOUT */
+#pay .text.error
+{
+    color: var(--cw);
+}
+#pay header h1, #pay header p
+{
+    color: var(--cw);
+}
+#pay > form:nth-child(2) p
+{
+    font-size: 1rem;
+    grid-area: title;
+}
+#pay input[type="text"], #pay input[type="email"]
+{
+    background: #ffffff9e;
+}
+#pay button
+{
+    border-radius: 0px;
+    margin: 10px 0;
+    width: 100%;
+    color: var(--cw);
+    background: var(--cbl);
+    grid-area: button;
+}
+#pay div.error img, #pay div.wait img, #pay div.cpte img
+{
+    width: 150px;
+}
+#pay div.error h2
+{
+    color: var(--cr);
+}
+#pay div.error p, #pay div.wait p, #pay div.pmt p, #pay div.cpte p
+{
+    width: 40ch;
+    font-weight: 600;
+    text-align: center;
+}
+#pay div.pmt h2 span
+{
+    color: var(--cbl);
+}
+#pay div.pmt button
+{
+    border-radius: 15px;
+    background: none;
+    color: var(--cbk);
+    padding: 11px 13px;
+    width: auto;
+}
+#pay div.show h2
+{
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+#pay div.show p span
+{
+    font-weight: 600;
+}
+
+#pay div.show
+{
+    display: none;
+}
+#pay div.pmt
+{
+    display: none;
+}
+#pay div.wait
+{
+    display: none;
+}
+#pay div.error
+{
+    display: none;
+}
+#pay div.normalPic
+{
+    display: block;
+}
+#pay div.normal
+{
+    display: grid;
+}
+#pay div.cpte
+{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/* MEDIAS */
+@media (max-width: 1700px)
+{
+    #pay div.normalPic img
+    {
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 1350px)
+{
+    #pay
+    {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+            'header'
+            'boxOne'
+            'boxTwo';
+        grid-row-gap: 2rem;
+    }
+}
+
+@media (max-width: 730px)
+{
+    #pay
+    {
+        padding: 6rem 3% 10rem 3%;
+    }
+}
+@media (max-width: 500px)
+{
+    #pay div.pmt h2, #pay div.wait h2, #pay div.cpte h2
+    {
+        text-align: center;
+    }
+}
+@media (max-width: 445px)
+{
+    #pay > form:nth-child(2)
+    {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'title'
+            'first'
+            'last'
+            'email'
+            'num'
+            'appNum'
+            'button';
+        grid-template-rows: 60px 65px 65px 65px 65px 65px 65px;
+        grid-row-gap: 1rem;
+        padding: 1rem;
+    }
+    #pay div.error p, #pay div.wait p, #pay div.pmt p, #pay div.cpte p
+    {
+        width: auto;
+        padding: 5px;
+    }
+    #pay div.show, #pay div.wait
+    {
+        padding: 1rem;
+    }
+}
+@media (max-width: 300px)
+{
+    #pay div.wait h2
+    {
+        font-size: 3rem;
+    }
+}

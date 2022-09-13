@@ -1,0 +1,67 @@
+/* POSITIONING */
+#login-grid {
+    margin: 5rem 11%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#login {
+    padding-bottom: 10rem;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#login form {
+    width: 500px;
+}
+
+#login form > div {
+    position: relative;
+}
+
+#login form svg {
+    position: absolute;
+    bottom: 13px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#login-image img {
+    position: relative;
+    top: 13%;
+    width: 100%;
+}
+/* TEXT */
+#login h1 {
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+#login > p {
+    color: rgba(82, 82, 82, 0.815);
+}
+#login .text.error {
+    color: #cf6767 !important;
+    display: none;
+}
+
+#login .text.label {
+    position: relative;
+    top: 11px;
+}
+
+
+/* BUTTON */
+#login form button {
+    width: 100%;
+    border-radius: 0;
+    background: var(--cbl);
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    padding: 20px 13px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0 0 0;
+    border-radius: 0;
+}

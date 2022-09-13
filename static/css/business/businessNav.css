@@ -1,0 +1,140 @@
+/*Horizontal Navigation */
+nav#horizontalNav
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-column-gap: 1rem;
+    border-bottom: 1px solid #80808047;
+}
+nav#horizontalNav span
+{
+    color: var(--cg);
+}
+/* User Profile Popup in Horizontal Navigation */
+nav#horizontalNav #userProfilePopup
+{
+    position: absolute;
+    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    border: 1px solid #8080804d;
+    box-shadow: 0 8px 20px #0000001a;
+    z-index: 2;
+    background: white;
+    display: none;
+    border-radius: 0 0 10px 10px;
+}
+nav#horizontalNav #userProfilePopup .profilePicture
+{
+    width: 100px;
+    height: 100px;
+}
+nav#horizontalNav #userProfilePopup .userProfilePopBackground
+{
+    position: absolute;
+    height: 30%;
+    background: var(--cdbl);
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    background-image: url(https://static0.srcdn.com/wordpress/wp-content/uploads/2020/07/Scooby-Doo-Mystery-Inc.jpg);
+    background-size: cover;
+    filter: blur(1px);
+}
+.toggleDisplay 
+{
+    display: flex !important;
+    transition: all 20s ease;
+}
+.toggleAnimation
+{
+    opacity: 0;
+    transform: scale(0.8);
+    transition: var(--ftr);
+}
+
+
+
+
+
+/*Vertical Navigation */
+nav#verticalNav
+{
+    background: #ececec;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 1rem 5px;
+}
+nav#verticalNav, #topLeftLogo
+{
+    border-right: 1px solid #3838381f;
+}
+/* Links in Vertical Navigation */
+nav#verticalNav span
+{
+    font-family: var(--fft);
+    font-weight: 900;
+    color: #504d4d;
+    font-size: 15px;
+    text-shadow: 0 0 #5656566b;
+}
+nav#verticalNav li
+{
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: var(--ftr);
+    display: flex;
+    align-items: center;
+    grid-column-gap: 5px;
+}
+nav#verticalNav li, nav#verticalNav li a
+{
+    color: #797979c7;
+    font-size: 14px;
+    transition: var(--ftr);
+}
+nav#verticalNav li:hover
+{
+    background: #cecece7a;
+}
+nav#verticalNav li:hover a, nav#verticalNav li:hover .bi
+{
+    color: var(--cbk);
+}
+nav#verticalNav .bi
+{
+    width: 18px;
+    height: 18px;
+
+}
+
+
+.selectedPath 
+{
+    color: var(--cbk) !Important;
+}
+
+.headList:hover
+{
+    background: #ececec !important;
+}
+
+.profitSymbol
+{
+    margin-left: 5px;
+    color: #3e9e3e;
+    background: #65bf6552;
+    border-radius: 4px;
+    padding: 3px;
+}
+
+.profitSymbolNeg
+{
+    color: #c52727 !important;
+    background: #ff000033 !important;
+}

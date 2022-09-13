@@ -1,0 +1,50 @@
+#goodbad
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
+}
+#goodbad img 
+{
+    width: 200px;
+}
+#goodbad p:nth-child(3)
+{
+    width: 65ch;
+    margin: 1rem 0px;
+    text-align: center;
+    padding: 3px;
+}
+#goodbad p:nth-child(3) span
+{
+    font-weight: 700;
+}
+#goodbad p:nth-child(4)
+{
+    font-weight: 700;
+    text-align: center;
+}
+
+@media (max-width: 600px)
+{
+    #goodbad p:nth-child(3)
+    {
+        width: auto;
+    }
+    #goodbad h1
+    {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 300px)
+{
+    #goodbad h1 
+    {
+        font-size: 2rem;
+    }
+    #goodbad img 
+    {
+        width: 50%;
+    }
+}

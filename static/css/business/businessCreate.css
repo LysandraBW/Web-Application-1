@@ -1,0 +1,244 @@
+#editB
+{
+    padding: 1rem;
+    position: relative;
+}
+/* HEADER */
+#editB > header
+{
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+}
+#editB header h1
+{
+    font-size: 3rem;
+}
+#editB p
+{
+    color: var(--cg);
+}
+/* FIND APPOINTMENT ID */
+#editB > form:nth-child(2)
+{
+    display: flex;
+    align-items: center;
+    grid-column-gap: 5px;
+    margin: 2rem 0 5px 0;
+}
+#editB > form:nth-child(2) input, #editB > div:nth-child(2) button
+{
+    height: min-content;
+}
+#editB > form:nth-child(2) input
+{
+    width: 100px;
+}
+/* FORM */
+#editForm form
+{
+    display: grid;
+    grid-row-gap: 3rem;
+    width: 50%;
+}
+/* FORM HEADER */
+#editForm header
+{
+    margin: 2rem 0;
+    
+}
+#editForm header h1
+{
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    
+}
+/* FORM SECTION CONSTANTS */
+#editForm form > div > h2
+{
+    font-size: 1rem;
+    color: rgb(46, 44, 44);
+}
+#editForm > form label
+{
+    color: var(--cg);
+    font-size: 13px;
+    display: block;
+}
+/* PERSONAL SECTION */
+#editForm form > div.personal
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'header0 header0' 
+                        'first last'
+                        'email phone'
+                        'contact contact';
+    grid-row-gap: 1rem;
+    grid-column-gap: 2rem;
+}
+#editForm form > div.personal > h2
+{
+    grid-area: header0;
+}
+
+/* VEHICLE SECTION */
+#editForm form > div.vehicle
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'header1 header1 header1' 'VIN VIN VIN' 'MAKE MODEL YEAR' 'PLATE PLATE PLATE' 'MILE MILE MILE';
+    grid-row-gap: 1rem;
+    grid-column-gap: 2rem;
+}
+#editForm form > div.vehicle > h2
+{
+    grid-area: header1;
+}
+#editForm form > div.vehicle > div:nth-child(2)
+{
+    grid-area: VIN;
+}
+#editForm form > div.vehicle > div:nth-child(3)
+{
+    grid-area: MAKE;
+}
+#editForm form > div.vehicle > div:nth-child(4)
+{
+    grid-area: MODEL;
+}
+#editForm form > div.vehicle > div:nth-child(5)
+{
+    grid-area: YEAR;
+}
+#editForm form > div.vehicle > div:nth-child(6)
+{
+    grid-area: PLATE;
+}
+#editForm form > div.vehicle > div:nth-child(7)
+{
+    grid-area: MILE;
+}
+/* SERVICES SECTION */
+#editForm form > div.services
+{
+    display: grid;
+    grid-row-gap: 1rem;
+}
+#editForm form > div.services > section
+{
+    display: grid;
+    grid-row-gap: 1rem;
+}
+#editForm form > div.services > div > select > option
+{
+    cursor: pointer !important;
+}
+#editForm form > div.services > section > div > ul > li span
+{
+    position: relative;
+    top: 3px;
+}
+#editForm form > div.services > section > div > ul > li span:hover svg
+{
+    cursor: pointer;
+    color: rgba(255, 0, 0, 0.658);
+}
+#editForm form > div.services > section > div > ul > li span svg
+{
+    color: var(--cg);
+}
+/* APPOINTMENT SECTION */
+#editForm form > div.appointment 
+{
+    display: grid;
+    grid-row-gap: 1rem;
+}
+.dateInputFormat
+{
+    display: grid;
+    grid-column-gap: 5px;
+    align-items: center;
+
+}
+.dateInputFormat.five
+{
+    grid-template-columns: max-content min-content max-content min-content max-content;
+}
+.dateInputFormat.three
+{
+    grid-template-columns: max-content min-content max-content max-content;
+}
+.horizontalDate
+{
+    display: grid;
+    grid-template-columns: max-content min-content max-content;
+    grid-column-gap: 1rem;
+    align-items: center;
+}
+.horizontalDate select
+{
+    padding: 2px 5px !important;
+    width: 60px;
+}
+.slash
+{
+    font-size: 21px;
+    font-weight: 100 !important;
+    transform: rotate(-15deg);
+}
+.horizontalDate span.text
+{
+    font-size: 25px;
+    color: var(--cbk);
+}
+.at
+{
+    font-size: 15px !important;
+    font-weight: 400 !important;
+}
+.semicolon
+{
+    position: relative;
+    top: -4px;
+}
+
+
+
+
+
+
+/* OVERALL */
+#editB input, #editB select, #editB textarea
+{
+    border: 1px solid #7777775c;
+    padding: 10px 12px;
+    border-radius: 4px;
+    width: 100%;
+}
+#editB textarea
+{
+    resize: none;
+    width: 100%;
+    height: 100px;
+}
+#editB button
+{
+    border-radius: 3px;
+    padding: 10px 16px;
+    background: var(--cbl);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+}
+#editB input:focus, #editB select:focus, #editB textarea:focus
+{
+    outline: none;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
